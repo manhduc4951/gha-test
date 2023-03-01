@@ -1,10 +1,20 @@
 name: First Workflow
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
 jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello World
-        run: |
-          echo "Hello"
-          echo "World"
+      - name: Print Log Level
+        run: echo "Log level: ${{ inputs.logLevel }}"
+        
