@@ -18,4 +18,6 @@ jobs:
       - name: Print Log Level
         run: |
           echo "Log level: ${{ inputs.logLevel }}"
-        
+      - name: Print env GITHUB_WORKSPACE
+        run: |
+          echo "GITHUB_WORKSPAKCE location: ${{ env.GITHUB_WORKSPACE }}"
