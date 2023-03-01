@@ -21,3 +21,6 @@ jobs:
       - name: Print env GITHUB_WORKSPACE
         run: |
           echo "GITHUB_WORKSPAKCE location: ${{ env.GITHUB_WORKSPACE }}"
+          echo $GITHUB_WORKSPACE
+          echo $GITHUB_ENV
+          echo $PATH
