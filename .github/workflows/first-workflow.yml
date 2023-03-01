@@ -16,5 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Log Level
-        run: echo "Log level: ${{ inputs.logLevel }}"
+        run: |
+          echo "Log level: ${{ inputs.logLevel }}"
         
