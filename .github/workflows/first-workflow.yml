@@ -11,12 +11,19 @@ on:
         - info
         - warning
         - debug
+      deployToWhere:
+        description: 'Where to deploy'
+        required: true
+        default: 'TEST'
+        type: choice
+        options:
+        - TEST
+        - PROD
 env:
   DB_NAME: my_db_name
-  WHERE_TO_GRAB_SECRETS: TEST
 jobs:
   first-job:
-    environment: ${{env.WHERE_TO_GRAB_SECRETS}}
+    environment: ${{inputs.deployToWhere}}
     runs-on: ubuntu-latest
     steps:
       - name: Print Log Level
