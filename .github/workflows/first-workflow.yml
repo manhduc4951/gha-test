@@ -11,6 +11,8 @@ on:
         - info
         - warning
         - debug
+env:
+  DB_NAME: my_db_name
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -18,9 +20,12 @@ jobs:
       - name: Print Log Level
         run: |
           echo "Log level: ${{ inputs.logLevel }}"
-      - name: Print env GITHUB_WORKSPACE
+      - name: Print DB_NAME env
         run: |
-          echo "GITHUB_WORKSPAKCE location: ${{ env.GITHUB_WORKSPACE }}"
-          echo $GITHUB_WORKSPACE
-          echo $GITHUB_ENV
-          echo $PATH
+          echo $DB_NAME
+#       - name: Print env GITHUB_WORKSPACE
+#         run: |
+#           echo "GITHUB_WORKSPAKCE location: ${{ env.GITHUB_WORKSPACE }}"
+#           echo $GITHUB_WORKSPACE
+#           echo $GITHUB_ENV
+#           echo $PATH
