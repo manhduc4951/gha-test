@@ -28,4 +28,8 @@ jobs:
         run: |
           echo $GITHUB_WORKSPACE
           echo "${{ env.GITHUB_WORKSPACE }}"
+      - name: Print env PATH
+        run: |
+          echo $PATH
+          echo "${{ env.PATH }}"
           
