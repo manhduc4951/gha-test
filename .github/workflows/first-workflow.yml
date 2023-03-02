@@ -23,6 +23,7 @@ jobs:
       - name: Print DB_NAME env
         run: |
           echo $DB_NAME
+          echo "${{ env.DB_NAME }}"
 #       - name: Print env GITHUB_WORKSPACE
 #         run: |
 #           echo "GITHUB_WORKSPAKCE location: ${{ env.GITHUB_WORKSPACE }}"
