@@ -15,6 +15,7 @@ env:
   DB_NAME: my_db_name
 jobs:
   first-job:
+    environment: TEST
     runs-on: ubuntu-latest
     steps:
       - name: Print Log Level
