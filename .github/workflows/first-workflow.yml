@@ -13,9 +13,10 @@ on:
         - debug
 env:
   DB_NAME: my_db_name
+  WHERE_TO_GRAB_SECRETS: TEST
 jobs:
   first-job:
-    environment: TEST
+    environment: ${{ env.WHERE_TO_GRAB_SECRETS }}
     runs-on: ubuntu-latest
     steps:
       - name: Print Log Level
