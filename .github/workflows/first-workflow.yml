@@ -47,4 +47,7 @@ jobs:
       - name: Print DB_PORT
         run: |
           echo "${{vars.DB_PORT}}"
+      - name: Print REPO_VAR
+        run: |
+          echo "${{ vars.REPO_VAR }}"
           
