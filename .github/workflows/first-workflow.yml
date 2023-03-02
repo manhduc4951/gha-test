@@ -24,9 +24,8 @@ jobs:
         run: |
           echo $DB_NAME
           echo "${{ env.DB_NAME }}"
-#       - name: Print env GITHUB_WORKSPACE
-#         run: |
-#           echo "GITHUB_WORKSPAKCE location: ${{ env.GITHUB_WORKSPACE }}"
-#           echo $GITHUB_WORKSPACE
-#           echo $GITHUB_ENV
-#           echo $PATH
+      - name: Print env GITHUB_WORKSPACE
+        run: |
+          echo $GITHUB_WORKSPACE
+          echo "${{ env.GITHUB_WORKSPACE }}"
+          
