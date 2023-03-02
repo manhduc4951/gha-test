@@ -16,7 +16,7 @@ env:
   WHERE_TO_GRAB_SECRETS: TEST
 jobs:
   first-job:
-    environment: $WHERE_TO_GRAB_SECRETS
+    environment: ${{env.WHERE_TO_GRAB_SECRETS}}
     runs-on: ubuntu-latest
     steps:
       - name: Print Log Level
