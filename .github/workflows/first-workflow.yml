@@ -44,4 +44,7 @@ jobs:
       - name: Test print secret DB_PASSWORD
         run: |
           echo "${{ secrets.DB_PASSWORD }}"
+      - name: Print DB_NAME
+        run: |
+          echo $DB_NAME
           
