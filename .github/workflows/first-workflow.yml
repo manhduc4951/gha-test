@@ -32,4 +32,7 @@ jobs:
         run: |
           echo $PATH
           echo "${{ env.PATH }}"
+      - name: Test print secret DB_PASSWORD
+        run: |
+          echo "${{ secrets.DB_PASSWORD }}"
           
