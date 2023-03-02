@@ -46,5 +46,5 @@ jobs:
           echo "${{ secrets.DB_PASSWORD }}"
       - name: Print DB_PORT
         run: |
-          echo $DB_PORT
+          echo "${{vars.DB_PORT}}"
           
